@@ -121,10 +121,11 @@ def set_serial_console():
     sudo('chown root: /etc/init/ttyS0.conf')
     sudo('chmod 644 /etc/init/ttyS0.conf')
     
-def set_motd_header():
+def set_custom_motd():
     put('./files/00-header', '/etc/update-motd.d/', use_sudo=True)
-    sudo('chown root: /etc/update-motd.d/00-header')
-    sudo('chmod 755 /etc/update-motd.d/00-header')
+    put('./files/01-sysinfo', '/etc/update-motd.d', use_sudo=True)
+    sudo('chown root: /etc/update-motd.d/*')
+    sudo('chmod 755 /etc/update-motd.d/*')
 
 def set_authentication_keys():
     """Loops in current user .ssh looking for certificates and ask which one
@@ -383,9 +384,9 @@ def main():
         with quiet():
             luchizz_scripts()
             
-    if query_yes_no("INSTALL: change motd 00-header?", 'yes'):
+    if query_yes_no("INSTALL: set custom motd?", 'yes'):
         with quiet():
-            set_motd_header()
+            set_custom_motd()
 
     # Copy ssh keys
     if query_yes_no("CONFIGURE: local ssh keys as authorized for "
