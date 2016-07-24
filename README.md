@@ -4,6 +4,7 @@ luchizz
 **Make any Linux shell like home.**
 
 Tested on:
+ - Ubuntu 16.04 Xenial
  - Ubuntu 14.04 Trusty
  - Debian 7.7 Wheezy
 
