@@ -9,7 +9,7 @@ FYEL="\[\033[33m\]" # foreground yellow
 FPRP="\[\033[35m\]" # foreground purple
 FBLE="\[\033[34m\]" # foreground blue
 
-PS1="$HC$FYEL[ $FBLE${debian_chroot:+($debian_chroot)}\u$FPRP@\h$FYEL: $FBLE\w $FYEL]\\$ $RS"
+PS1="$HC$FYEL[ $FBLE${debian_chroot:+($debian_chroot)}\u$FPRP@\h$FYEL: $FBLE\w $FYEL]\\\$ $RS"
 
 # useful aliases
 alias rm='rm -i'
