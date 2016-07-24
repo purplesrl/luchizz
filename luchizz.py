@@ -52,8 +52,8 @@ from utils import query_yes_no, check_root, print_splash, listdir_fullpath
 from utils import is_installed
 
 __author__ = "Luca Giovenzana <luca@giovenzana.org>"
-__date__ = "2016-03-22"
-__version__ = "0.0.13"
+__date__ = "2016-07-24"
+__version__ = "0.0.14-purple"
 
 # Luchizz script folder
 LUCHIZZ_DIR = os.path.dirname(os.path.realpath(__file__))
