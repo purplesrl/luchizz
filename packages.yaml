@@ -15,6 +15,7 @@ base:
     - ack-grep
     - telnet
     - toilet
+    - python-pycurl
 
 net:
     - ethtool
