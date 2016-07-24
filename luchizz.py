@@ -122,9 +122,9 @@ def set_serial_console():
     sudo('chmod 644 /etc/init/ttyS0.conf')
     
 def set_motd_header():
-    put('./files/00-header', '/etc/update-motd-d/', use_sudo=True)
-    sudo('chown root: /etc/update-motd-d/00-header')
-    sudo('chmod 755 /etc/update-motd-d/00-header')
+    put('./files/00-header', '/etc/update-motd.d/', use_sudo=True)
+    sudo('chown root: /etc/update-motd.d/00-header')
+    sudo('chmod 755 /etc/update-motd.d/00-header')
 
 def set_authentication_keys():
     """Loops in current user .ssh looking for certificates and ask which one
