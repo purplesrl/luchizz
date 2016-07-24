@@ -13,4 +13,7 @@ dpkg -s "mdadm" >/dev/null 2>&1 && {
 dpkg -s "libvirt-bin" >/dev/null 2>&1 && {
         virsh list
     } 
+dpkg -s "docker-engine" >/dev/null 2>&1 && {
+        docker ps
+    }
 echo
