@@ -26,6 +26,7 @@ alias ack='ack-grep'
 # enable nice colors with ls and grep
 if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b`"
+    export GREP_COLORS='ms=1;32:mc=1;32:sl=:cx=:fn=1;32:ln=1;32:bn=1;32:se=1;32'
     alias ls='ls --color=auto'
     alias dir='ls --color=auto --format=vertical'
     alias vdir='ls --color=auto --format=long'
