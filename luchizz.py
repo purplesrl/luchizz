@@ -382,6 +382,10 @@ def main():
     if query_yes_no("INSTALL: luchizz scripts in /usr/local/bin?", 'yes'):
         with quiet():
             luchizz_scripts()
+            
+    if query_yes_no("INSTALL: change motd 00-header?", 'yes'):
+        with quiet():
+            set_motd_header()
 
     # Copy ssh keys
     if query_yes_no("CONFIGURE: local ssh keys as authorized for "
